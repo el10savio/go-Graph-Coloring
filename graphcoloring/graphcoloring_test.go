@@ -85,24 +85,24 @@ func TestInitColorMap_InvalidCount(t *testing.T) {
 	}
 }
 
-func TestFindMinNode(t *testing.T) {
+func TestFindSmallestNode(t *testing.T) {
 	graph := graphTest
 
 	expectedNode := Node{Value: 1, Links: []int{2, 3}, Color: -1}
 
-	actualNode := graph.FindMinNode()
+	actualNode := graph.FindSmallestNode()
 
 	if !reflect.DeepEqual(expectedNode, actualNode) {
 		t.Fatalf("\nExpected %v \nGot %v", expectedNode, actualNode)
 	}
 }
 
-func TestFindMinNode_NoGraph(t *testing.T) {
+func TestFindSmallestNode_NoGraph(t *testing.T) {
 	var graph Graph
 
 	expectedNode := Node{}
 
-	actualNode := graph.FindMinNode()
+	actualNode := graph.FindSmallestNode()
 
 	if !reflect.DeepEqual(expectedNode, actualNode) {
 		t.Fatalf("\nExpected %v \nGot %v", expectedNode, actualNode)
