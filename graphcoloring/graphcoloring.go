@@ -1,4 +1,4 @@
-package main
+package graphcoloring
 
 import "fmt"
 
@@ -84,7 +84,4 @@ func getFirstAvailableColor(unavailableColors map[int]bool) int {
 	}
 
 	return availableColor
-}
-
-func main() {
 }
